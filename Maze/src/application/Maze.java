@@ -1,7 +1,7 @@
 package application;
 
 /****************************************************************************************************
- * @author 
+ * @author Robert Casas (sgk782)
  * UTSA CS 3443 - Group project - Pathfinders - Maze
  * Fall 2021
  * 
@@ -11,6 +11,8 @@ package application;
  * 		Example ex	- This is an example variable for comments
  ***************************************************************************************************/
 public class Maze {
+	
+	private int mazeHash;
 	
 	public Maze() {
 		
