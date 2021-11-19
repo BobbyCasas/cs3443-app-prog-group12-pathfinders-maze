@@ -1,14 +1,13 @@
-package application;
+package application.controller;
 
 import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /****************************************************************************************************
@@ -16,16 +15,10 @@ import javafx.stage.Stage;
  * UTSA CS 3443 - Group project - Pathfinders - Maze
  * Fall 2021
  * 
- * MazeController is a controller class for Maze.fxml which 
- * contains FXML variables and various event handler methods.
+ * EndController is a controller class for Escaped.fxml and Minotaur.fxml which 
+ * contains FXML variables and event handler methods handleHome() and handleNew().
  ***************************************************************************************************/
-public class MazeController {
-	@FXML private Label hint;
-	
-	@FXML private Pane topPane;
-	@FXML private Pane bottomPane;
-	@FXML private Pane leftPane;
-	@FXML private Pane rightPane;
+public class EndController {
 	
 	@FXML public void handleHome(ActionEvent event) throws IOException {
 		AnchorPane homePane = FXMLLoader.load(getClass().getResource("Home.fxml"));	// homePane loads Login.fxml
@@ -36,24 +29,6 @@ public class MazeController {
 	}
 	
 	@FXML public void handleNew(ActionEvent event) throws IOException {
-		leftPane.setStyle("-fx-background-color: black");
-		rightPane.setStyle("-fx-background-color: black");
-		bottomPane.setStyle("-fx-background-color: black");
-	}
-	
-	@FXML public void handleTop(ActionEvent event) throws IOException {
-		
-	}
-	
-	@FXML public void handleBottom(ActionEvent event) throws IOException {
-		
-	}
-	
-	@FXML public void handleLeft(ActionEvent event) throws IOException {
-		
-	}
-	
-	@FXML public void handleRight(ActionEvent event) throws IOException {
 		
 	}
 }

@@ -1,4 +1,4 @@
-package application;
+package application.controller;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 public class HomeController {
 	
 	@FXML public void handleStart(ActionEvent event) throws IOException {
-		GridPane mazePane = FXMLLoader.load(getClass().getResource("Maze.fxml"));	// mazePane loads Maze.fxml
+		GridPane mazePane = FXMLLoader.load(getClass().getResource("/application/view/Maze.fxml"));	// mazePane loads Maze.fxml
 		Scene scene = new Scene(mazePane);											// scene = mazePane
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();	// window = current window
         window.setScene(scene);														// set scene in window
