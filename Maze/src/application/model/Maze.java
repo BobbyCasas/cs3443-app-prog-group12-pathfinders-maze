@@ -16,21 +16,41 @@ import java.util.Random;
 public class Maze {
 	
 	private int minotaurChance;
-	private LinkedList<Integer> mazeSolution = new LinkedList<Integer>();
+	private LinkedList<Room> mazeSolution = new LinkedList<Room>();
 	private Random random = new Random();
 	
+	/************************************************************************************************
+	 * public Maze():
+	 * 		- Constructor for a Maze object that initializes minotaurChance to 0 and generates the 
+	 * 		Rooms for mazeSolution LinkedList. 
+	 * 
+	 ***********************************************************************************************/
 	public Maze() {
 		minotaurChance = 0;
-		
-		for(int i=0; i<10; i++)
-			mazeSolution.add((random.nextInt(4)+1)*10 + (random.nextInt(3)+1));
+		Room newRoom = new Room(11);	// Room 11 is Maze's default starting room
+		mazeSolution.add(newRoom);		// add starting room to beginning of maze solution
+		for(int i=0; i<10; i++) {		// add 10 random rooms after starting room
+			newRoom = new Room((random.nextInt(4)+1)*10 + (random.nextInt(3)+1));
+			mazeSolution.add(newRoom);
+		}
 	}
 	
 	boolean addWrongTurn() {
 		minotaurChance += random.nextInt(10)+1;
 		if (minotaurChance >= 100)
-			return true;
-		
+			return true;		
 		return false;
 	}
+
+	public int getMinotaurChance() {
+		return minotaurChance;
+	}
+
+	public void setMinotaurChance(int minotaurChance) {
+		this.minotaurChance = minotaurChance;
+	}
+
+	public LinkedList<Room> getMazeSolution() {
+		return mazeSolution;
+	}	
 }
