@@ -32,41 +32,41 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label fx:id="hint" alignment="CENTER" prefHeight="100.0" prefWidth="500.0" text="This is a placeholder hint." wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <Label fx:id="hint" alignment="CENTER" prefHeight="100.0" prefWidth="500.0" text="You are trapped in a maze. Escape before the Minotaur finds you!" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Pane fx:id="topPane" layoutX="539.0" layoutY="20.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: null;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowSpan="2">
          <children>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleTop" prefHeight="174.0" prefWidth="261.0" style="-fx-background-color: null;" text="(Top)">
+            <Button fx:id="topButton" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleTop" prefHeight="174.0" prefWidth="261.0" style="-fx-background-color: null;" text="This way is an exit. Click anywhere in this area to advance to the next room" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="bottomPane" layoutX="20.0" layoutY="628.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="2">
+         <children>
+            <Button fx:id="bottomButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleBottom" prefHeight="172.0" prefWidth="261.0" style="-fx-background-color: null;">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane fx:id="bottomPane" layoutX="20.0" layoutY="628.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: null;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="2">
+      <Pane fx:id="leftPane" layoutX="20.0" layoutY="20.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="3">
          <children>
-            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBottom" prefHeight="172.0" prefWidth="261.0" style="-fx-background-color: null;" text="(Bottom)">
+            <Button fx:id="leftButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleLeft" prefHeight="261.0" prefWidth="172.0" style="-fx-background-color: null;">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane fx:id="leftPane" layoutX="20.0" layoutY="20.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: null;" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="3">
+      <Pane fx:id="rightPane" layoutX="20.0" layoutY="281.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="3">
          <children>
-            <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLeft" prefHeight="261.0" prefWidth="172.0" style="-fx-background-color: null;" text="(Left)">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
-      <Pane fx:id="rightPane" layoutX="20.0" layoutY="281.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: null;" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="3">
-         <children>
-            <Button alignment="BASELINE_RIGHT" contentDisplay="CENTER" layoutY="2.0" mnemonicParsing="false" onAction="#handleRight" prefHeight="258.0" prefWidth="174.0" style="-fx-background-color: null;" text="(Right)">
+            <Button fx:id="rightButton" alignment="BASELINE_RIGHT" contentDisplay="CENTER" disable="true" layoutY="2.0" mnemonicParsing="false" onAction="#handleRight" prefHeight="258.0" prefWidth="174.0" style="-fx-background-color: null;">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
