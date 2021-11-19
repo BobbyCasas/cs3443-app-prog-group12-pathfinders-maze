@@ -28,6 +28,7 @@ public class Maze {
 	public Maze() {
 		minotaurChance = 0;
 		Room newRoom = new Room(11);	// Room 11 is Maze's default starting room
+		newRoom.setVisited(true);		// room will be visited at start of maze
 		mazeSolution.add(newRoom);		// add starting room to beginning of maze solution
 		for(int i=0; i<10; i++) {		// add 10 random rooms after starting room
 			newRoom = new Room((random.nextInt(4)+1)*10 + (random.nextInt(3)+1));
@@ -35,11 +36,8 @@ public class Maze {
 		}
 	}
 	
-	boolean addWrongTurn() {
+	public void minotaurChanceUp() {
 		minotaurChance += random.nextInt(10)+1;
-		if (minotaurChance >= 100)
-			return true;		
-		return false;
 	}
 
 	public int getMinotaurChance() {

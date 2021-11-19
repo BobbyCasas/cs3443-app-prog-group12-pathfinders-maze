@@ -27,26 +27,31 @@ import javafx.stage.Stage;
 public class MazeController {
 	
 	@FXML private Label hint;
+	@FXML private Label tutorial;
 	
-	@FXML private Pane topPane;
-	@FXML private Pane leftPane;
-	@FXML private Pane rightPane;
-	@FXML private Pane bottomPane;
+	@FXML private Pane northPane;
+	@FXML private Pane eastPane;
+	@FXML private Pane westPane;
+	@FXML private Pane southPane;
 	
-	@FXML private Button topButton;
-	@FXML private Button leftButton;
-	@FXML private Button rightButton;
-	@FXML private Button bottomButton;
+	@FXML private Button northButton;
+	@FXML private Button eastButton;
+	@FXML private Button westButton;
+	@FXML private Button southButton;
 	
-	private LinkedList<Room> mazeSolution = new LinkedList<Room>();
-	private ListIterator<Room> mazeItr;
-	private Room currentRoom;
+	Maze maze = new Maze();
+	private LinkedList<Room> mazeSolution = maze.getMazeSolution();
+	private ListIterator<Room> mazeItr = mazeSolution.listIterator();
+	private Room currentRoom = mazeSolution.getFirst();
+	
+	private int currentRoomKey;
+	private int numExits;
+	private int correctExit;
 	
 	public void initialize() {
-		Maze maze = new Maze();
-		mazeSolution = maze.getMazeSolution();
-		mazeItr = mazeSolution.listIterator();
-		currentRoom = mazeSolution.getFirst();
+		currentRoomKey = currentRoom.getKey();
+		numExits = currentRoomKey / 10;
+		correctExit = currentRoomKey % 10;
 	}
 	
 	@FXML public void handleHome(ActionEvent event) throws IOException {
@@ -58,21 +63,34 @@ public class MazeController {
 	}
 	
 	@FXML public void handleNew(ActionEvent event) throws IOException {
-		leftPane.setStyle("-fx-background-color: black");
-		rightPane.setStyle("-fx-background-color: black");
-		bottomPane.setStyle("-fx-background-color: black");
+		AnchorPane mazePane = FXMLLoader.load(getClass().getResource("/application/view/Maze.fxml"));	// mazePane loads Maze.fxml
+		Scene scene = new Scene(mazePane);											// scene = mazePane
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();	// window = current window
+        window.setScene(scene);														// set scene in window
+        window.show();																// show window
 	}
 	
-	@FXML public void handleTop(ActionEvent event) throws IOException {
-		if (currentRoom.getKey() == 11 
-				|| currentRoom.getKey() == 21 
-				|| currentRoom.getKey() == 31 
-				|| currentRoom.getKey() == 41) {
-			currentRoom = mazeItr.next();
-			//more code here
+	@FXML public void handleTop(ActionEvent event) throws IOException {		
+		if (!tutorial.isDisabled())						// if tutorial is showing...
+			tutorial.setDisable(true);						// disable it
+		
+		if (correctExit == 1) {							// if correct exit was taken...
+			currentRoom = mazeItr.next();					// set up next room
+			currentRoomKey = currentRoom.getKey();
+			numExits = currentRoomKey / 10;
+			correctExit = currentRoomKey % 10;
 		}
-		else {
+		else {											// else, wrong exit was taken...
+			maze.minotaurChanceUp();							// increase minotaur chance
 			
+			northButton.setDisable(true);						// close all exits except south
+			northPane.setStyle("-fx-background-color: black");
+			westButton.setDisable(true);
+			westPane.setStyle("-fx-background-color: black");
+			eastButton.setDisable(true);
+			eastPane.setStyle("-fx-background-color: black");			
+			southButton.setDisable(false);
+			southPane.setStyle("-fx-background-color: null");
 		}
 	}
 	
