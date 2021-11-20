@@ -27,7 +27,7 @@ public class Room {
 	 * 		  23	2 exits			right
 	 * 		  31	3 exits			straight
 	 *        32	3 exits			left
-	 * 		  33	3 exits			right
+	 *		  33	3 exits			right
 	 * 		  41	4 exits			straight
 	 * 		  42	4 exits			left
 	 * 		  43	4 exits			right
