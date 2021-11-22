@@ -19,25 +19,30 @@ public class Maze {
 	private LinkedList<Room> mazeSolution = new LinkedList<Room>();
 	private Random random = new Random();
 	
-	/************************************************************************************************
-	 * public Maze():
-	 * 		- Constructor for a Maze object that initializes minotaurChance to 0 and generates the 
-	 * 		Rooms for mazeSolution LinkedList. 
-	 * 
+	/********************************** public Maze() ***********************************************
+	 * - Constructor for a Maze object that initializes minotaurChance to 0 and generates the 
+	 * Rooms for mazeSolution LinkedList.
 	 ***********************************************************************************************/
 	public Maze() {
 		minotaurChance = 0;
-		Room newRoom = new Room(11);	// Room 11 is Maze's default starting room
-		newRoom.setVisited(true);		// room will be visited at start of maze
-		mazeSolution.add(newRoom);		// add starting room to beginning of maze solution
+		Room newRoom = new Room(11);	// Room key 11 is Maze's starting room
+		newRoom.setVisited(true);		// set room as visited
+		newRoom.setEntrance("south");	// set room entrance to "south" for correct exit = straight to be true
+		mazeSolution.add(newRoom);		// add starting room to maze solution
+		
 		for(int i=0; i<10; i++) {		// add 10 random rooms after starting room
-			newRoom = new Room((random.nextInt(4)+1)*10 + (random.nextInt(3)+1));
+			newRoom = new Room((random.nextInt(2)+3)*10 + (random.nextInt(3)+1));
 			mazeSolution.add(newRoom);
 		}
 	}
 	
-	public void minotaurChanceUp() {
-		minotaurChance += random.nextInt(10)+1;
+	public void increaseMinotaurChance() {
+		minotaurChance += random.nextInt(10)+11;
+	}
+	
+	public Room getDeadend() {
+		Room deadendRoom = new Room(14);
+		return deadendRoom;
 	}
 
 	public int getMinotaurChance() {

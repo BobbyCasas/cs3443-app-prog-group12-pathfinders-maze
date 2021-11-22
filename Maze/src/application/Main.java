@@ -18,11 +18,10 @@ import javafx.fxml.FXMLLoader;
  ***************************************************************************************************/
 public class Main extends Application {
 	
-	/****************************************************************************************************
-	 * public void start(Stage primaryStage):
-	 * 		- Method overrides application start method to load Home.fxml for an object hierarchy 
-	 * 		and application.css for CSS customization. Method also 
-	 * 		sets the scene and shows the application window.
+	/**************************** public void start(Stage primaryStage) *********************************
+	 * - Method overrides application start method to load Home.fxml for an object hierarchy 
+	 * and application.css for CSS customization. Method also 
+	 * sets the scene and shows the application window.
 	 ***************************************************************************************************/
 	@Override
 	public void start(Stage primaryStage) {

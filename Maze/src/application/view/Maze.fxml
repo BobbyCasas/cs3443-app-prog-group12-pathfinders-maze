@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
@@ -32,48 +33,51 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label fx:id="hint" alignment="CENTER" prefHeight="100.0" prefWidth="500.0" text="You are trapped in a maze. Escape before the Minotaur finds you!" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <Label fx:id="hint" alignment="CENTER" prefHeight="87.0" prefWidth="438.0" text="You are trapped in a maze. Escape before the Minotaur finds you!" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <font>
-            <Font size="18.0" />
+            <Font name="Centaur" size="18.0" />
          </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
       </Label>
       <Pane fx:id="northPane" layoutX="539.0" layoutY="20.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: null;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowSpan="2">
          <children>
-            <Button fx:id="northButton" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleTop" prefHeight="174.0" prefWidth="261.0" style="-fx-background-color: null;" text="North" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="tutorial" alignment="CENTER" layoutX="17.0" layoutY="48.0" prefHeight="126.0" prefWidth="227.0" text="Click anywhere near the exit to advance to the next room." textAlignment="CENTER" wrapText="true">
                <font>
-                  <Font size="24.0" />
-               </font>
-            </Button>
-            <Label fx:id="tutorial" alignment="CENTER" layoutX="17.0" layoutY="48.0" prefHeight="126.0" prefWidth="227.0" style="-fx-text-fill: darkred;" text="Click anywhere near the exit to advance to the next room." textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font size="24.0" />
+                  <Font name="System Italic" size="18.0" />
                </font>
             </Label>
+            <Button fx:id="northButton" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNorth" prefHeight="174.0" prefWidth="261.0" style="-fx-background-color: null;" text="North" textAlignment="CENTER">
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <Pane fx:id="southPane" layoutX="20.0" layoutY="628.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="2">
          <children>
-            <Button fx:id="southButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleBottom" prefHeight="172.0" prefWidth="261.0" style="-fx-background-color: null;">
+            <Button fx:id="southButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleSouth" prefHeight="172.0" prefWidth="261.0" style="-fx-background-color: null;" text="South">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="Centaur" size="24.0" />
                </font>
             </Button>
          </children>
       </Pane>
       <Pane fx:id="westPane" layoutX="20.0" layoutY="20.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="3">
          <children>
-            <Button fx:id="westButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleLeft" prefHeight="261.0" prefWidth="172.0" style="-fx-background-color: null;">
+            <Button fx:id="westButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleWest" prefHeight="261.0" prefWidth="172.0" style="-fx-background-color: null;" text="West">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="Centaur" size="24.0" />
                </font>
             </Button>
          </children>
       </Pane>
       <Pane fx:id="eastPane" layoutX="20.0" layoutY="281.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="3">
          <children>
-            <Button fx:id="eastButton" alignment="BASELINE_RIGHT" contentDisplay="CENTER" disable="true" layoutY="2.0" mnemonicParsing="false" onAction="#handleRight" prefHeight="258.0" prefWidth="174.0" style="-fx-background-color: null;">
+            <Button fx:id="eastButton" alignment="BASELINE_RIGHT" contentDisplay="CENTER" disable="true" layoutY="2.0" mnemonicParsing="false" onAction="#handleEast" prefHeight="258.0" prefWidth="174.0" style="-fx-background-color: null;" text="East">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="Centaur" size="24.0" />
                </font>
             </Button>
          </children>
