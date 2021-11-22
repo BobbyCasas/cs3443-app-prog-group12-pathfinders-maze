@@ -1,7 +1,7 @@
 # cs3443-app-prog-pathfinders-maze
 ### Steps to run this application in Eclipse with EGit plugin installed:
 1. `File` > `Import...` > `Git` > `Projects from Git` > `Next` > `Clone URI` > `Next`
-2. For `URI` enter repository URL(e.g., https://github.com/[username]/cs3443-app-prog-group12-pathfinders-maze.git). This field is automatically synchronized with the other fields. 
+2. Enter repository URL in `URI` field(e.g., https://github.com/[username]/cs3443-app-prog-group12-pathfinders-maze.git). This field is automatically synchronized with the other fields. 
    - Ensure `User` is your Github username
    - Ensure `Password` is your Github **Personal Access Token**
    - Select `Store in Secure Store` > `Next`
