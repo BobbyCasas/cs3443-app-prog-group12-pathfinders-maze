@@ -1,5 +1,5 @@
 # cs3443-app-prog-pathfinders-maze
-# Steps to run this application in Eclipse with EGit plugin installed:
+#2 Steps to run this application in Eclipse with EGit plugin installed:
 - Right-click Package-Explorer, click "Import..."
 - Select Git > Projects from Git, click Next.
 - Select "Clone URI", click Next.
