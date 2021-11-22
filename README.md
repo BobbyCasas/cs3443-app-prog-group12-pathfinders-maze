@@ -5,8 +5,8 @@
    - Ensure `User` is your Github username
    - Ensure `Password` is your Github **Personal Access Token**
    - Select `Store in Secure Store` > `Next`
-4. For *Branch Selection* hit `Select All` > `Next`
-5. For *Local Destination* you can use the default git repository or hit `Browse` to choose your own > `Finish`
+4. Under **Branch Selection** hit `Select All` > `Next`
+5. Under **Local Destination** you can use the default git repository or hit `Browse` to choose your own > `Finish`
 6. Upon successful completion of the clone operation, the newly cloned repository appears in the `Package-Explorer` automatically.
 - [EGit Cloning Remote Repositories](https://wiki.eclipse.org/EGit/User_Guide#Cloning_Remote_Repositories)
 - [EGit User Guide](https://wiki.eclipse.org/EGit/User_Guide#Basic_Tutorial:_Adding_a_project_to_version_control)
