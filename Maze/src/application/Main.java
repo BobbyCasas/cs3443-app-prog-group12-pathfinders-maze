@@ -1,5 +1,7 @@
 package application;
-	
+import application.model.*;	
+import java.io.FileNotFoundException;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -7,7 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
 
 /****************************************************************************************************
- * @authors Robert Casas (sgk782), Dylan Johnson (), 
+ * @authors Robert Casas (sgk782), Dylan Johnson (gug903), 
  * 			Nicholas Hageman (), Ethan Hammons (), Jonathan Yakey ()
  * UTSA CS 3443 - Group project - Pathfinders - Maze
  * Fall 2021
@@ -22,9 +24,14 @@ public class Main extends Application {
 	 * - Method overrides application start method to load Home.fxml for an object hierarchy 
 	 * and application.css for CSS customization. Method also 
 	 * sets the scene and shows the application window.
+	 * @throws FileNotFoundException 
 	 ***************************************************************************************************/
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws FileNotFoundException {		
+		GetHints h = new GetHints();
+		Hint hint;
+		hint=h.getHintarr().get(1);
+		System.out.println(hint.getDir());
 		try {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/application/view/Home.fxml"));
 			Scene scene = new Scene(root,800,800);

@@ -1,0 +1,4 @@
+North,Hint0
+East,Hint1
+West,Hint2
+South,Hint3
