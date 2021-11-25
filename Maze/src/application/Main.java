@@ -1,5 +1,5 @@
 package application;
-import application.model.*;	
+
 import java.io.FileNotFoundException;
 
 import javafx.application.Application;
@@ -27,11 +27,7 @@ public class Main extends Application {
 	 * @throws FileNotFoundException 
 	 ***************************************************************************************************/
 	@Override
-	public void start(Stage primaryStage) throws FileNotFoundException {		
-		GetHints h = new GetHints();
-		Hint hint;
-		hint=h.getHintarr().get(1);
-		System.out.println(hint.getDir());
+	public void start(Stage primaryStage) {		
 		try {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/application/view/Home.fxml"));
 			Scene scene = new Scene(root,800,800);
