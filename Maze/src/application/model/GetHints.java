@@ -3,6 +3,7 @@ package application.model;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 /****************************************************************************************************
  * @author Dylan Johnson (gug903)
@@ -63,7 +64,14 @@ public class GetHints {
 		for(int i=0;i<getHintSize();i++) {
 			h.add(new Hint(getHint(i),getDir(i)));
 		}
+		randomize(h);
 		return h;	
 	}
 	
+	public ArrayList<Hint> randomize(ArrayList<Hint> h){
+		Hint first=h.remove(0);
+		Collections.shuffle(h);
+		h.add(0,first);
+		return null;
+	}
 }
