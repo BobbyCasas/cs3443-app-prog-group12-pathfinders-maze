@@ -64,7 +64,7 @@ public class GetHints {
 		for(int i=0;i<getHintSize();i++) {
 			h.add(new Hint(getHint(i),getDir(i)));
 		}
-		randomize(h);
+		h=randomize(h);
 		return h;	
 	}
 	
@@ -72,6 +72,6 @@ public class GetHints {
 		Hint first=h.remove(0);
 		Collections.shuffle(h);
 		h.add(0,first);
-		return null;
+		return h;
 	}
 }
