@@ -31,6 +31,7 @@ public class Maze {
 		mazeSolution.add(newRoom);		// add starting room to maze solution
 		
 		for(int i=0; i<10; i++) {		// add 10 random rooms after starting room
+			//ADD HINT CALLS HERE WILL NEED TO REPLACE 10 WITH SIZE OF HINT
 			newRoom = new Room((random.nextInt(2)+3)*10 + (random.nextInt(3)+1));
 			mazeSolution.add(newRoom);
 		}
