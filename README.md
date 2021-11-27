@@ -7,7 +7,7 @@ Maze is a game where a player navigates through a maze using hints in order to e
 1. `File` > `Import...` > `Git` > `Projects from Git` > `Next` > `Clone URI` > `Next`
 2. For `URI` enter repository URL(e.g., https://github.com/[username]/cs3443-app-prog-group12-pathfinders-maze.git). This field is automatically synchronized with the other fields. 
    - Ensure `User` is your Github username
-   - Ensure `Password` is your Github **Personal Access Token**
+   - Ensure `Password` is a Github **Personal Access Token**
    - Select `Store in Secure Store` > `Next`
 4. Under **Branch Selection** hit `Select All` > `Next`
 5. Under **Local Destination** you can use the default git repository or hit `Browse` to choose your own > `Finish`
