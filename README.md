@@ -1,4 +1,4 @@
-#### cs3443-app-prog-group12-pathfinders-maze
+###### cs3443-app-prog-group12-pathfinders-maze
 # Maze *- by Pathfinders*
 ### Steps to run this application in Eclipse with EGit plugin installed:
 1. `File` > `Import...` > `Git` > `Projects from Git` > `Next` > `Clone URI` > `Next`
