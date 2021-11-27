@@ -35,10 +35,9 @@ public class Hint {
 	public void setDir(String dir) {
 		this.dir = dir;
 	}
-	public Hint(String hint, String dir) {//constructor for Hint class
-		super();
-		this.hint = hint;
+	public Hint(String dir, String hint) {//constructor for Hint class
 		this.dir = dir;
+		this.hint = hint;
 	}
 	
 	
