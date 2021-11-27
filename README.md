@@ -1,5 +1,6 @@
 ###### cs3443-app-prog-group12-pathfinders-maze
 # Maze *- by Pathfinders*
+Maze is a game where a player navigates through a maze using hints in order to escape the hungry Minotaur. If navigated correctly, the player can escape the maze. If the player takes too many wrong turns, the Minotaur will get its meal.
 ### Steps to run this application in Eclipse with EGit plugin installed:
 1. `File` > `Import...` > `Git` > `Projects from Git` > `Next` > `Clone URI` > `Next`
 2. For `URI` enter repository URL(e.g., https://github.com/[username]/cs3443-app-prog-group12-pathfinders-maze.git). This field is automatically synchronized with the other fields. 
