@@ -1,4 +1,4 @@
-# Maze *by Pathfinders*
+# Maze *- by Pathfinders*
 ### Steps to run this application in Eclipse with EGit plugin installed:
 1. `File` > `Import...` > `Git` > `Projects from Git` > `Next` > `Clone URI` > `Next`
 2. For `URI` enter repository URL(e.g., https://github.com/[username]/cs3443-app-prog-group12-pathfinders-maze.git). This field is automatically synchronized with the other fields. 
