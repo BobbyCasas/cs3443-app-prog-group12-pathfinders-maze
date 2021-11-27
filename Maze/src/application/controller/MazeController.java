@@ -41,7 +41,7 @@ public class MazeController {
 	@FXML private Button westButton;
 	@FXML private Button southButton;
 	
-	Maze maze = new Maze();										// Maze object
+	private Maze maze = new Maze();									// Maze object
 	private LinkedList<Room> mazeRooms = maze.getMazeRooms();	// mazeRooms LinkedList from maze
 	private int mazeIndex = 0;									// index used to move forward and backward through mazeRooms
 	private Room currentRoom = mazeRooms.get(mazeIndex);		// the current room being displayed
