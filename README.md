@@ -1,6 +1,7 @@
 ###### cs3443-app-prog-group12-pathfinders-maze
 # Maze 
 ##### Created by **Pathfinders** - Robert Casas *(BobbyCasas)*, Nick Hageman *(Iconnick)*, Dylan Johnson *(gug903)*, Ethan Hammons *(MrWhiskersss)*, Jonathan Yakey *()*
+### Project Description:
 Maze is a game where a player navigates through a maze using hints in order to escape the hungry Minotaur. If navigated correctly, the player can escape the maze. If the player takes too many wrong turns, the Minotaur will get its meal.
 ### Steps to run this application in Eclipse with EGit plugin installed:
 1. `File` > `Import...` > `Git` > `Projects from Git` > `Next` > `Clone URI` > `Next`
