@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.EndController">
+   <children>
+      <Label alignment="CENTER" layoutX="225.0" layoutY="302.0" prefHeight="196.0" prefWidth="351.0" text="You Escaped the Maze!" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="441.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleHome" prefHeight="127.0" prefWidth="265.0" style="-fx-background-color: gray;" text="Home">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleNew" prefHeight="127.0" prefWidth="265.0" style="-fx-background-color: gray;" text="New Maze">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Button>
+      <BorderPane layoutY="600.0" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: green;" />
+      <BorderPane layoutX="331.0" layoutY="472.0" prefHeight="133.0" prefWidth="116.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>
